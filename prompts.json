@@ -1,0 +1,15 @@
+[{
+    "Decomposition_head": "Your task is to decompose the given question Q into sub-questions. You should based on the specific logic of the question to determine the number of sub-questions and output them sequentially. \n",
+    "Prompt_decomposition": "Please only output the decomposed sub-questions as a string in list format, where each element represents the text of a sub-question, in the form of ’[\"subq1\", \"subq2\", \"subq3\"]’. For each sub-questions, if you consider the sub-question to be sufficiently simple and no further decomposition is needed, then output \"End.\", otherwise, output \"Continue.\". Please strictly follow the format of the example below when answering the question. Here are some examples: \n",
+    "Extraction_head": "Your task is to extract the entities (such as people, places, organizations, etc.) and relations (representing behaviors or properties between entities, such as verbs, attributes, or categories, etc.) involved in the input questions. These entities and relations can help answer the input questions. \n",
+    "Prompt_extraction": "Please extract entities and relations in one of the following forms: entity, tuples, or triples from the given input List. Entity means that only an entity, i.e. <entity>. Tuples means that an entity and a relation, i.e. <entity-relation>. Triples means that complete triples, i.e. <entity-relation-entity>. Please strictly follow the format of the example below when answering the question. \n",
+    "Extraction_head_global": "Your task is to extract the subgraphs involved in a set of input questions.\n",
+    "Prompt_extraction_global": "Please extract and organize information from a set of input questions into structured subgraphs. Each subgraph represents a group of triples (subject, relation, object) that share common entities and capture the logical relationships between the questions. Here are some examples: \n",
+    "Reasoning_head": "Your task is to answer the questions with the provided completed reasoning and input knowledge.\n",
+    "Prompt_reason": "Please note that the response must be included in square brackets [xxx].\n",
+    "Self-verification_head": "You are a logical verification assistant. Your task is to check whether the answer to a given question is logically consistent with the provided completed reasoning and input knowledge. If the answer is consistent, respond with “right”. If the answer is inconsistent, respond with “wrong”. \n",
+    "Prompt_self-verification": "Please note that the response must be included in square brackets [xxx].\n",
+    "Rethink_head": "You are a reasoning and knowledge integration assistant. Your task is to re-think a question that was previously answered incorrectly by the self-verification model. Use the provided completed reasoning and input knowledge to generate a new answer. \n",
+    "Prompt_rethink": "Please note, if the knowledge is insufficient to answer the question, respond with “Insufficient information, I don’t know”.The response must be included in square brackets [xxx]. \n"
+}
+]
